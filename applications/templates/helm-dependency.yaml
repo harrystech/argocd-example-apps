@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: helm-dependency
-  namespace: argocd
+  namespace: infra-argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
