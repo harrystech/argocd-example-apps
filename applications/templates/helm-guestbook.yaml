@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: helm-guestbook
-  namespace: argocd
+  namespace: infra-argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     path: helm-guestbook
-    repoURL: https://github.com/argoproj/argocd-example-apps
+    repoURL: https://github.com/harrystech/argocd-example-apps
     targetRevision: {{ .Values.spec.source.targetRevision }}
   syncPolicy:
     automated:
